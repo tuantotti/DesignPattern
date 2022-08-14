@@ -1,0 +1,17 @@
+package pattern.structural.decorator.decorator;
+
+import pattern.structural.decorator.component.Beverage;
+
+public class Milk extends CondimentDecorator {
+    public Milk(Beverage beverage) {
+        this.beverage = beverage;
+    }
+
+    public String getDescription() {
+        return beverage.getDescription() + ", Milk";
+    }
+
+    public double cost() {
+        return beverage.cost() + .10;
+    }
+}
